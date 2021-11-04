@@ -10,7 +10,6 @@ class AppFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
-        // Bundle to manage file and directories
         $finder = new Finder();
         $finder->in(__DIR__ . '/Sql/');
         $finder->name('*.sql');

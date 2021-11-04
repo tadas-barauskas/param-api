@@ -39,7 +39,7 @@ class Article
 
     /**
      * @param Attribute $attribute
-     * @return $this
+     * @return Article
      */
     public function addAttribute(Attribute $attribute): self
     {
@@ -50,7 +50,7 @@ class Article
 
     /**
      * @param Attribute[] $attributes
-     * @return $this
+     * @return Article
      */
     public function addAttributes(array $attributes): self
     {
@@ -62,7 +62,7 @@ class Article
     }
 
     /**
-     * @return Collection
+     * @return Collection|Attribute[]
      */
     public function getAttributes(): Collection
     {
@@ -79,6 +79,7 @@ class Article
 
     /**
      * @param int $id
+     * @return Article
      */
     public function setId(int $id): self
     {

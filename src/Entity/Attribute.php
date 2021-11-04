@@ -41,8 +41,9 @@ class Attribute
 
     /**
      * @param int $id
+     * @return Attribute
      */
-    public function setId(int $id): Attribute
+    public function setId(int $id): self
     {
         $this->id = $id;
 
@@ -59,8 +60,9 @@ class Attribute
 
     /**
      * @param string $key
+     * @return Attribute
      */
-    public function setKey(string $key): Attribute
+    public function setKey(string $key): self
     {
         $this->key = $key;
 
@@ -77,8 +79,9 @@ class Attribute
 
     /**
      * @param string $value
+     * @return Attribute
      */
-    public function setValue(string $value): Attribute
+    public function setValue(string $value): self
     {
         $this->value = $value;
 

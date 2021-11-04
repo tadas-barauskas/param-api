@@ -23,7 +23,7 @@ class ParameterController extends AbstractController
     /**
      * @Route("/parameter", name="parameter_list")
      */
-    public function list(Request $request)
+    public function list(Request $request): Response
     {
         $key = 'filters';
         $key = $this->appendParameters($key, $request, 'param1');

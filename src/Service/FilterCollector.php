@@ -2,6 +2,7 @@
 
 namespace App\Service;
 
+use App\Entity\Article;
 use App\Repository\ArticleRepository;
 
 class FilterCollector
@@ -32,11 +33,14 @@ class FilterCollector
         return $options;
     }
 
+    /**
+     * @param Article[] $articles
+     * @return array
+     */
     private function collectByAttributeKeyValue(array $articles): array
     {
         $collection = [];
         foreach ($articles as $article) {
-            /* @var $article \App\Entity\Article */
             foreach ($article->getAttributes() as $attribute) {
                 $collection[$attribute->getKey()][$attribute->getValue()][] = $article;
             }
